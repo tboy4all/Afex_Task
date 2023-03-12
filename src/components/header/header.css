@@ -1,0 +1,12 @@
+.CustomOver:hover .childHover {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* .CustomOver {
+  background-color: red !important;
+} */
+
+.CustomOver:hover .childHoverTwo {
+  color: black !important;
+}
