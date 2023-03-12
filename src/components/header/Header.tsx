@@ -6,7 +6,11 @@ import {
   RiArrowUpDownLine,
 } from "react-icons/ri";
 import SubTable from "../SubTable";
-import { HeaderTableDiv, TableSection } from "./header.styles";
+import {
+  FullTableSection,
+  HeaderTableDiv,
+  TableSection,
+} from "./header.styles";
 import FullTable from "../FullTable";
 
 const Header = () => {
@@ -156,11 +160,11 @@ const Header = () => {
           </div>
         </HeaderTableDiv>
 
-        <div>
-          <div style={{ paddingRight: "20px" }}>
+        <FullTableSection>
+          <div className="Table">
             <FullTable headerDetails={"Sell Board"} subTableArr={fullTable} />
           </div>
-        </div>
+        </FullTableSection>
       </TableSection>
     </div>
   );

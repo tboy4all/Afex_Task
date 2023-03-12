@@ -15,6 +15,11 @@ export const SubTableDiv = styled.div`
   background-color: #fff;
   border-radius: 8px 8px 0px 0px;
 
+  @media (max-width: 720px) {
+    width: 900px;
+    overflow: auto;
+  }
+
   .table_header {
     padding: 18px 15px;
 
