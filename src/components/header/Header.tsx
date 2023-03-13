@@ -5,19 +5,14 @@ import {
   RiArrowRightSLine,
   RiArrowUpDownLine,
 } from 'react-icons/ri'
-import ChartCard from '../ChartCard'
-import Modal from '../../components/modal/Modal'
-import Table from '../table/Table'
-import { tableData1, tableData } from '../../data/tableData'
-import Tab from '../tab/Tab'
 
-import chart1 from '../../assets/images/Fill.png'
-import chart2 from '../../assets/images/fill2.png'
-import chart3 from '../../assets/images/fill3.png'
-import TableTradeLog from '../table/TableTradeLog'
+import Modal from '../../components/modal/Modal'
+
+import Main from '../Main'
 
 const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
+
   return (
     <div className='ml-[6rem] h-[40px] '>
       <div className='flex gap-1 py-7 text-gray-500 text-sm '>
@@ -48,48 +43,7 @@ const Header = () => {
       </section>
 
       {/* Chart Section */}
-      <section className='flex gap-6 mr-8'>
-        <ChartCard
-          price='8,374,763'
-          header='Cash Balance'
-          bg='Decline'
-          month='Monitored Monthly'
-          img={chart1}
-        />
-
-        <ChartCard
-          price='8,374,763'
-          header='Securities Value'
-          bg='Decline'
-          month='Monitored Monthly'
-          img={chart2}
-        />
-
-        <ChartCard
-          price='8,374,763'
-          header='Loan Balance'
-          bg='Decline'
-          month='Monitored Monthly'
-          img={chart3}
-        />
-      </section>
-
-      {/* Tab Section */}
-      <Tab />
-
-      {/* Table Two Column Section */}
-      <section className='grid grid-cols-2 gap-6 mr-8'>
-        <Table sell='Buy Board' data={tableData} />
-        <Table
-          data={tableData1}
-          sell='Sell Board'
-          style={{ color: 'red' }}
-          bgStle={{ backgroundColor: '#FFF2F0', color: '#E2341D' }}
-        />
-      </section>
-
-      <section><TableTradeLog /></section>
-
+      <Main />
       <Modal openModal={showModal} onClose={() => setShowModal(false)} />
     </div>
   )

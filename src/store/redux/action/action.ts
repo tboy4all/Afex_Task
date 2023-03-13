@@ -27,7 +27,7 @@ export const updateOrderData = (data: any, dispatch: any) => {
 export const fetchLiveMarket = async (dispatch: any) => {
   // @ts-ignore
   const _liveMarket = await axios.get('/security-price/live')
-  console.log(_liveMarket)
+//   console.log(_liveMarket)
   // dispatch({
   //     type: ACTION_TYPE.APP_LOADER,
   //     payload: bool

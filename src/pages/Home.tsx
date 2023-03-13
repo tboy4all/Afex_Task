@@ -5,9 +5,11 @@ import Sidebar from '../components/SideBar'
 
 const Home = () => {
   return (
-    <div> <Header />
-    <Sidebar />
-    <Footer /></div>
+    <div>
+      <Header />
+      <Sidebar />
+      <Footer />
+    </div>
   )
 }
 
