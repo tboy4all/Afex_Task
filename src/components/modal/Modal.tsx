@@ -17,6 +17,7 @@ const Modal = (props: Props) => {
           e.stopPropagation()
         }}
       >
+        <div className='w-12 h-12 bg-white absolute top-[-0.3rem] right-28 translate transform rotate-45 z-1000'></div>
         <h2 className={styles.headerTitle}>Page Settings</h2>
         <div className={styles.topHeader}>
           <h6>Board</h6>

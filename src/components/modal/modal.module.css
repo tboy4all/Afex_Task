@@ -15,11 +15,11 @@
   width: 90%;
   height: 456px;
   position: fixed;
-  top: 20%;
+  top: 18%;
   right: 7%;
   background-color: #fff;
   border-radius: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0px 0px 0px 1px rgba(152, 161, 179, 0.1),
     0px 15px 35px -5px rgba(17, 24, 38, 0.2), 0px 5px 15px rgba(0, 0, 0, 0.08);
   padding: 20px;
