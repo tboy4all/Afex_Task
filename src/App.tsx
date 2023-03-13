@@ -1,15 +1,11 @@
 import React from 'react'
 import './App.css'
-import Footer from './components/footer/Fooer'
-import Header from './components/header/Header'
-import Sidebar from './components/SideBar'
+import Home from './pages/Home'
 
 function App() {
   return (
-    <div className={`w-full bg-[#FAFBFC] h-[694px]`}>
-      <Header />
-      <Sidebar />
-      <Footer />
+    <div className={`w-full bg-[#FAFBFC] h-[1110px]`}>
+      <Home />
     </div>
   )
 }

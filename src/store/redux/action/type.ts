@@ -1,0 +1,8 @@
+const ACTION_TYPE = {
+    APP_LOADER: "APP::LOADER",
+    APP_LIVE_MARKET: "APP::LIVE_MARKET",
+    APP_ORDER: "APP::ORDER",
+    APP_CLIENT: "APP::CLIENT",
+}
+
+export default ACTION_TYPE;

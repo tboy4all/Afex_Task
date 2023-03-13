@@ -1,0 +1,77 @@
+.tableContainer {
+  margin-top: 30px;
+  overflow: auto;
+  border-radius: 6px;
+  border: 1px solid #eaebf0;
+  height: 300px;
+}
+
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-style: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.tableBody {
+  /* display: block; */
+  height: 200px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.table th,
+.table td {
+  border: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #eaebf0;
+  padding: 24px;
+}
+
+td {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.table th {
+  color: #5f6d7e;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  padding-left: 24px;
+  text-align: left;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1f1f1f;
+  background-color: white;
+  border-bottom: 1px solid #eaebf0;
+  padding-left: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.priceText {
+  color: #5dc264;
+}
+
+.buyText {
+  color: #259a2e;
+  font-weight: 500;
+  font-size: 13px;
+  background: #e7fde9;
+  border-radius: 5px;
+  padding: 2px 8px;
+  /* width: 30px; */
+}
