@@ -11,7 +11,10 @@ const Footer = () => {
 
       <Marquee>
         {liveData.map((item, index) => (
-          <div className='flex flex-col mr-16 text-sm items-center text-[#000] font-medium'>
+          <div
+            key={index}
+            className='flex flex-col mr-16 text-sm items-center text-[#000] font-medium'
+          >
             <span>{item.title}</span>
             <span className='text-sm'>{item.amount}</span>
           </div>

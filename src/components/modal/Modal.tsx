@@ -58,7 +58,7 @@ const Modal = (props: Props) => {
             <input
               className='accent-red-600 rounded border-red-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-offset-0 focus:ring-red-200 focus:ring-opacity-50'
               type='checkbox'
-              checked
+              defaultChecked
             />
           </span>
 

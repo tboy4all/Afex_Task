@@ -1,20 +1,22 @@
 import React from 'react'
 import styles from './Table.module.css'
-import { tableData } from '../../data/tableData'
+// import { tableData } from '../../data/tableData'
+
 type ButtonProps = {
   // 👇️ type as React.CSSProperties
   style?: React.CSSProperties
   bgStle?: React.CSSProperties
   sell: string
+  data: any
 }
-const Table = ({ style, bgStle, sell }: ButtonProps) => {
+const Table = ({ style, bgStle, sell, data }: ButtonProps) => {
   return (
     <div className={`${styles.tableContainer}`}>
       <h3 className={styles.heading}>{sell}</h3>
       <table className={`${styles.table} ${styles.sticky}`}>
         <thead>
-          <tr className=''>
-            <th className=''>Product</th>
+          <tr>
+            <th>Product</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Action</th>
@@ -22,7 +24,7 @@ const Table = ({ style, bgStle, sell }: ButtonProps) => {
         </thead>
 
         <tbody className={styles.tableBody}>
-          {tableData.map((item, index) => (
+          {data.map((item:any, index:any) => (
             <tr key={index}>
               <td>{item.Product}</td>
               <td>{item.Quantity}</td>

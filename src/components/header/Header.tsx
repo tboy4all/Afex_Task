@@ -8,12 +8,13 @@ import {
 import ChartCard from '../ChartCard'
 import Modal from '../../components/modal/Modal'
 import Table from '../table/Table'
-import TableTradeLog from '../table/TableTradeLog'
+import { tableData1, tableData } from '../../data/tableData'
 import Tab from '../tab/Tab'
 
 import chart1 from '../../assets/images/Fill.png'
 import chart2 from '../../assets/images/fill2.png'
 import chart3 from '../../assets/images/fill3.png'
+import TableTradeLog from '../table/TableTradeLog'
 
 const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
@@ -78,17 +79,16 @@ const Header = () => {
 
       {/* Table Two Column Section */}
       <section className='grid grid-cols-2 gap-6 mr-8'>
-        <Table sell='Buy Board' />
+        <Table sell='Buy Board' data={tableData} />
         <Table
+          data={tableData1}
           sell='Sell Board'
           style={{ color: 'red' }}
           bgStle={{ backgroundColor: '#FFF2F0', color: '#E2341D' }}
         />
       </section>
 
-      <section>
-        <TableTradeLog />
-      </section>
+      <section><TableTradeLog /></section>
 
       <Modal openModal={showModal} onClose={() => setShowModal(false)} />
     </div>

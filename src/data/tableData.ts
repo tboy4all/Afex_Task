@@ -37,6 +37,45 @@ export const tableData = [
   },
 ]
 
+export const tableData1 = [
+  {
+    Product: 'Soybeans (SSBS) ',
+    Quantity: 2003,
+    Price: '6,471.39',
+    action: 'Sell',
+  },
+  {
+    Product: 'Paddy Rice (SPRL)',
+    Quantity: 86,
+    Price: ' 6,471.39',
+    action: 'Sell',
+  },
+  {
+    Product: 'Maize (SMAZ)',
+    Quantity: 2003,
+    Price: '6,471.39',
+    action: 'Sell',
+  },
+  {
+    Product: 'Sorghum (SSGM) ',
+    Quantity: 2003,
+    Price: '6,471.39',
+    action: 'Sell',
+  },
+  {
+    Product: 'Fair Trade ETC (FETC) ',
+    Quantity: 2003,
+    Price: '6,471.39',
+    action: 'Sell',
+  },
+  {
+    Product: 'Soybeans (SSBS)',
+    Quantity: 2003,
+    Price: '6,471.39',
+    action: 'Sell',
+  },
+]
+
 export const tradeLogData = [
   {
     Security: 'Soybeans (SSBS)',
