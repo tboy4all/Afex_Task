@@ -1,8 +1,8 @@
-import crypto from 'crypto'
+/* eslint-disable no-unused-expressions */
+import crypto from 'crypto-browserify'
 
 export default class Manager {
   constructor({ key: t, vector: r }) {
-    // eslint-disable-next-line no-unused-expressions
     ;(this.encrypt = (e) => do_encrypt_data(e, t, r)),
       (this.decrypt = (e) => do_decrypt_data(e, t, r))
   }

@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-import { fetchLiveMarket } from '../store/redux/action/action'
-import { useDispatch } from 'react-redux'
-import { getData } from '../hooks/useSocket'
-import { ReadyState } from 'react-use-websocket'
-
 import ChartCard from './ChartCard'
 import Tab from './tab/Tab'
 import Table from './table/Table'
@@ -16,33 +11,7 @@ import TableTradeLog from './table/TableTradeLog'
 import { tableData, tableData1 } from '../data/tableData'
 
 const Main = () => {
-  const dispatch = useDispatch()
-  // const orderData = getData('wss://comx-sand-api.afexnigeria.com/stream/trades')
-  // const clientData = getData(
-  //   'wss://comx-sand-api.afexnigeria.com/stream/client-positions?cid=9900153747'
-  // )
 
-  // console.log(orderData, clientData)
-
-  // listener for order
-  // useEffect(() => {
-  //   // if(orderData.readyState === ReadyState.OPEN){
-  //   if (orderData.messageHistory.length !== 0) {
-  //     console.log(orderData.lastMessage, orderData.messageHistory)
-  //   }
-  // }, [orderData.readyState])
-
-  // // listener for client
-  // useEffect(() => {
-  //   if (clientData.messageHistory.length !== 0) {
-  //     console.log(clientData.lastMessage, clientData.messageHistory)
-  //   }
-  // }, [clientData.readyState])
-
-  // // fetch default data
-  // useEffect(() => {
-  //   fetchLiveMarket(dispatch)
-  // }, [])
   return (
     <div>
       <section className='flex gap-6 mr-8'>

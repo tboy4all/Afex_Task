@@ -28,10 +28,11 @@
   border-left: none;
   border-bottom: 1px solid #eaebf0;
   padding: 24px;
+  color: #4e4d4d
 }
 
 td {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 

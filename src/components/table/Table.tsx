@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Table.module.css'
-// import { tableData } from '../../data/tableData'
 
 type ButtonProps = {
   // 👇️ type as React.CSSProperties
@@ -10,6 +9,8 @@ type ButtonProps = {
   data: any
 }
 const Table = ({ style, bgStle, sell, data }: ButtonProps) => {
+  const [dataOfInterestEncrypted, setDataOfInterestEncrypted] = useState([])
+
   return (
     <div className={`${styles.tableContainer}`}>
       <h3 className={styles.heading}>{sell}</h3>
@@ -24,7 +25,7 @@ const Table = ({ style, bgStle, sell, data }: ButtonProps) => {
         </thead>
 
         <tbody className={styles.tableBody}>
-          {data.map((item:any, index:any) => (
+          {data.map((item: any, index: any) => (
             <tr key={index}>
               <td>{item.Product}</td>
               <td>{item.Quantity}</td>
