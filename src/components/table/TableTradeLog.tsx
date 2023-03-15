@@ -5,11 +5,6 @@ import { cipher } from '../../utils/utils'
 
 const { decrypt } = cipher
 
-// console.log(
-//   'Decrypted',
-//   decrypt('FtgeAiaT84hYXWOesgnW1w==')
-// )
-
 const TableTradeLog = () => {
   const [tradeLog, setTradeLog] = useState<any[]>([])
 
@@ -68,9 +63,8 @@ const TableTradeLog = () => {
     hour12: false,
   })
 
-  tradeLog.map((logData) => console.log('Data', logData))
+  // tradeLog.map((logData) => console.log('Data', logData))
 
-  // const dates = tradeLog.map(dateString => new Date(dateString))
   return (
     <div className={`${styles.tableContainer} mr-8`}>
       <h3 className={styles.heading}>TradeLog</h3>

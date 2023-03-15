@@ -32,22 +32,28 @@ const Footer = () => {
         speed={10}
         gradient={false}
       >
-        {liveMarketData?.map((item) => (
-          <div
-            key={item.security_code}
-            className='w-full flex flex-col justify-between text-sm text-[#000] font-medium'
-          >
-            <span className=''>{item.security_code}</span>
+        {liveMarketData.length ? (
+          liveMarketData?.map((item) => (
+            <div
+              key={item['security_code']}
+              className='w-full flex flex-col justify-between text-sm text-[#000] font-medium'
+            >
+              <span>{item.security_code}</span>
 
-            <span className=''>
-              ₦
-              {item.price.toLocaleString('en-US', {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </span>
+              <span>
+                ₦
+                {item.price.toLocaleString('en-US', {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </span>
+            </div>
+          ))
+        ) : (
+          <div className='text-3xl font-bold'>
+            <p>Loading...</p>
           </div>
-        ))}
+        )}
       </Marquee>
     </footer>
   )
