@@ -1,10 +1,10 @@
 import Cipher from '@ibnlanre/cipher'
+
 // import { liveData } from '../../data/liveData'
 
-// Load environment variables from .env file
 
-const encryption_key = 'uEKBcN7kMKayW6SF8d0BtaJq60Musbp0'
-const initialization_vector = 'hA7wB3e4v87ihj6R'
+const encryption_key = process.env.REACT_APP_KEY as string
+const initialization_vector = process.env.REACT_APP_VECTOR as string
 
 export const cipher = new Cipher({
   initialization_vector,

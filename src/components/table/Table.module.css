@@ -28,7 +28,7 @@
   border-left: none;
   border-bottom: 1px solid #eaebf0;
   padding: 24px;
-  color: #4e4d4d
+  color: #4e4d4d;
 }
 
 td {
@@ -37,7 +37,7 @@ td {
 }
 
 .table th {
-  color: #5F6D7E;
+  color: #5f6d7e;
   background-color: white;
   font-size: 12px;
   font-weight: 500;
