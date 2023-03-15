@@ -29,11 +29,6 @@ const TableTradeLog = () => {
 
     // Listen for messages from the server
     socket.addEventListener('message', (event) => {
-      // const encryptedObj = JSON.parse(event.data.messages)
-      // setTradeLog(encryptedObj)
-
-      // console.log('Decrypted', decrypt(encryptedObj))
-
       try {
         const encryptedObj = JSON.parse(event.data).messages
         const decryptedObj = decrypt(encryptedObj)
@@ -73,7 +68,7 @@ const TableTradeLog = () => {
     hour12: false,
   })
 
-  // tradeLog.map((logData) => console.log('Data', logData))
+  tradeLog.map((logData) => console.log('Data', logData))
 
   // const dates = tradeLog.map(dateString => new Date(dateString))
   return (
@@ -93,12 +88,12 @@ const TableTradeLog = () => {
         </thead>
 
         <tbody className={styles.tableBody}>
-          {tradeLog.map((item) => (
-            <tr key={item.security_code} >
+          {tradeLog?.map((item) => (
+            <tr key={item.tid}>
               <td>{item.security_code}</td>
               <td>{item.board_type}</td>
               <td>{item.order_type}</td>
-              <td>{item.order_price}</td>
+              <td>{item.order_price.toFixed(2)}</td>
               <td>{item.units}</td>
               <td>{dateFormatter.format(new Date(item.updated))}</td>
               <td>{timeFormatter.format(new Date(item.updated))}</td>

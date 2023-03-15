@@ -13,7 +13,8 @@ const Footer = () => {
     fetch('https://comx-sand-api.afex.dev/api/security-price/live')
       .then((response) => response.json())
       .then((data) => {
-        setLiveMarketData(data.data)
+        // @ts-ignore
+        setLiveMarketData(decrypt(data.data))
       })
   }, [])
 
@@ -34,13 +35,17 @@ const Footer = () => {
         {liveMarketData?.map((item) => (
           <div
             key={item.security_code}
-            className='w-full flex flex-col justify-between text-sm items-center text-[#000] font-medium'
+            className='w-full flex flex-col justify-between text-sm text-[#000] font-medium'
           >
-            {/* @ts-ignore */}
-            <span>{decrypt(item.security_code)}</span>
+            <span className=''>{item.security_code}</span>
 
-            {/* @ts-ignore */}
-            <span className=''>₦{decrypt(item.price)}</span>
+            <span className=''>
+              ₦
+              {item.price.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </span>
           </div>
         ))}
       </Marquee>
