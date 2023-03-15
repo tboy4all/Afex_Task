@@ -21,7 +21,7 @@ const Sidebar = () => {
               ))}
             </div>
 
-            <div className='flex flex-col items-center mt-[57rem]'>
+            <div className='flex flex-col items-center mt-[52rem]'>
               {bottomIcons.map((Icon, ind) => (
                 <li key={ind} className='py-6 '>
                   <Icon.icon size={20} />
