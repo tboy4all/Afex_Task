@@ -18,10 +18,10 @@ const Tab = () => {
             className={`CustomOver transition-all duration-300 flex gap-3 pb-6  ${
               activeTab === link.name
                 ? 'text-red-600 border-red-600 border-b-2 pb-6'
-                : 'text-black hover:border-b-[1px] border-black'
+                : 'text-[#4e4d4d] hover:border-b-[1px] border-black'
             } `}
           >
-            <span className='pb-6'>{link.name}</span>
+            <span className='pb-6 text-xl'>{link.name}</span>
             {link.hasCount && (
               <span className='childHover flex items-center justify-center bg-gray-300 rounded-[8px] px-[6px] w-[29px] h-[18px] hover:text-white'>
                 {link.count}

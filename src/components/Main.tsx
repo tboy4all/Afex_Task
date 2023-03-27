@@ -37,8 +37,10 @@ const Main = () => {
           img={chart3}
         />
       </section>
+      
       {/* Tab Section */}
       <Tab />
+
       {/* Table Two Column Section */}
       <section className='grid grid-cols-2 gap-6 mr-8'>
         <Table sell='Buy Board' style={{ color: 'green' }} data={tableData} />
