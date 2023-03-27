@@ -6,6 +6,7 @@ type Props = {
   bg: string
   month: string
   img: any
+  bgStle?: React.CSSProperties
 }
 
 const ChartCard = (props: Props) => {
@@ -15,7 +16,10 @@ const ChartCard = (props: Props) => {
         <span className='text-[1.1rem] mb-5 text-black'>{props.header}</span>
         <span className='text-2xl font-medium'>&#8358; {props.price}</span>
         <div className='flex gap-2 mt-3'>
-          <span className='text-red-600 text-center rounded-md bg-[#FFF2F0] w-[4.5rem] h-[1.5rem] mt-1'>
+          <span
+            className='text-red-600 text-center rounded-md bg-[#FFF2F0] px-2 py-[1px] mt-1'
+            style={props.bgStle}
+          >
             {props.bg}
           </span>
           <span className='text-[#5F6D7E] text-md mt-1 px-2 '>

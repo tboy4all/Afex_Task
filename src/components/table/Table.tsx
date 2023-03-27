@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import styles from './Table.module.css'
 
 type ButtonProps = {
@@ -9,7 +8,7 @@ type ButtonProps = {
   data: any
 }
 const Table = ({ style, bgStle, sell, data }: ButtonProps) => {
-  const [dataOfInterestEncrypted, setDataOfInterestEncrypted] = useState([])
+ 
 
   return (
     <div className={`${styles.tableContainer}`}>
@@ -32,6 +31,7 @@ const Table = ({ style, bgStle, sell, data }: ButtonProps) => {
               <td className={styles.priceText} style={style}>
                 {item.Price}
               </td>
+
               <td>
                 <span className={styles.buyText} style={bgStle}>
                   {item.action}

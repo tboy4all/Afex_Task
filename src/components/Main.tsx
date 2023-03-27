@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-
 import ChartCard from './ChartCard'
 import Tab from './tab/Tab'
 import Table from './table/Table'
@@ -11,7 +9,6 @@ import TableTradeLog from './table/TableTradeLog'
 import { tableData, tableData1 } from '../data/tableData'
 
 const Main = () => {
-
   return (
     <div>
       <section className='flex gap-6 mr-8'>
@@ -34,7 +31,8 @@ const Main = () => {
         <ChartCard
           price='8,374,763'
           header='Loan Balance'
-          bg='Decline'
+          bgStle={{ backgroundColor: '#F0FAF0', color: 'green' }}
+          bg='Increment'
           month='Monitored Monthly'
           img={chart3}
         />
@@ -43,7 +41,7 @@ const Main = () => {
       <Tab />
       {/* Table Two Column Section */}
       <section className='grid grid-cols-2 gap-6 mr-8'>
-        <Table sell='Buy Board' data={tableData} />
+        <Table sell='Buy Board' style={{ color: 'green' }} data={tableData} />
         <Table
           data={tableData1}
           sell='Sell Board'
